@@ -40,3 +40,8 @@ zawiera(S,L) :-
 	sklej(_,L2,L),
 	sklej(S,_,L2).
 
+odwroc([], []).
+odwroc([H|T], L) :-
+	odwroc(T,R),
+	sklej(R,[H],L).
+
